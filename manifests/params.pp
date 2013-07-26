@@ -43,7 +43,7 @@ class phppgadmin::params {
 
   $http_conf_file = $operatingsystem ? {
     CentOS  => '/etc/httpd/conf.d/phpPgAdmin.conf',
-    Ubuntu  => '/etc/apache2/conf.d/phppgadmin',
+    Ubuntu  => '/etc/apache2/conf.d/phppgadmin.conf',
     default => undef,
   }
 
