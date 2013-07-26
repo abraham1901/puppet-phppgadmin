@@ -52,7 +52,9 @@ class phppgadmin (
   }
 
   if $install_apache == true {
-    class {'apache': }
+    class {'apache':
+       mpm_module => 'prefork',          
+    }
     class {'apache::mod::php': }
     package{$phppgadmin_package:
       ensure  => installed,
